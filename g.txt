@@ -1,0 +1,169 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace oopStudent
+{
+    class Student
+    {
+        public static List<Student> db = new List<Student>();
+        public static int count = 1;
+        public int ID;
+        public string Name;
+        public string SurName;
+        public int Age;
+        
+
+        public Student(string _name, string _surname, int _age)
+        {
+            Name = _name;
+            SurName = _surname;
+            Age = _age;
+            db.Add(this);
+        }
+
+        public static void Instruction()
+        {
+            Console.WriteLine("1.Create");
+            Console.WriteLine("2.Read");
+            Console.WriteLine("3.Update");
+            Console.WriteLine("4.Delete");
+            Console.WriteLine("emri sec qadam");
+
+            var cmmdNum =Convert.ToInt32(Console.ReadLine());
+
+            if (cmmdNum == 1)
+            {
+                Create();
+            }
+            else if (cmmdNum == 2)
+            {
+                Read();
+            }
+            else if (cmmdNum == 3)
+            {
+                Update();
+            }
+            else if (cmmdNum == 4)
+            {
+                Delete();
+            }
+            else
+            {
+                Console.WriteLine("unknown cmmd");
+            }
+
+        }
+
+        public static void Create()
+        {
+            
+            Console.WriteLine("Adinizi Yazin");
+            var ad = Console.ReadLine();
+            Console.WriteLine("soyAdinizi Yazin");
+            var soyAd = Console.ReadLine();
+            Console.WriteLine("Yawinizi Yazin");
+            int Yaw =Convert.ToInt32(Console.ReadLine());
+            Student telebeCreater = new Student(ad,soyAd,Yaw);
+            telebeCreater.ID = count;
+            count++;
+            Instruction();
+            
+        }
+
+        public static void Read()
+        {
+           
+            foreach (var item in Student.db)
+            {
+                
+                Console.WriteLine(item.ID + " " + item.Name + " " + item.SurName +  " " + item.Age);
+            }
+            Instruction();
+        }
+
+       
+
+        
+
+        public static void Update()
+        {
+            Console.WriteLine("Deyiwmek Istediyniz Itemin  id sini  daxil edin");
+            foreach (var item in db)
+            {
+                Console.WriteLine(item.ID + " " + item.Name + " " + item.SurName + " " + item.Age);
+            }
+            var updtId =Convert.ToInt32(Console.ReadLine());
+
+            foreach (var item in db)
+            {
+                if (item.ID == updtId)
+                {
+                    Console.WriteLine("1.Adi " + " 2.Soyadi "  + "3 .Yawi");
+                    int chooseId =Convert.ToInt32(Console.ReadLine());
+                    
+
+                    if (chooseId == 1)
+                    {
+                        Console.WriteLine("Yeni Adi Daxil Edin");
+                        var ad = Console.ReadLine();
+                        item.Name = ad;
+                        Instruction();
+                    }
+
+                    if (chooseId == 2)
+                    {
+                        Console.WriteLine("Yeni soyadi Daxil Edin");
+                        var soyad = Console.ReadLine();
+                        Instruction();
+                    }
+
+                    if (chooseId == 3)
+                    {
+                        Console.WriteLine("Yeni Yawi Daxil Edin");
+                        int yaw = Convert.ToInt32(Console.ReadLine());
+                        item.Age = yaw;
+                        Instruction();
+                    }
+                    else
+                    {
+                        Console.WriteLine("unknown id");
+                        Instruction();
+                    }
+                }
+            }
+        }
+
+
+
+        public static void Delete()
+        {
+            Console.WriteLine("silmek istediyinin id ini  yaz");
+            var id = Convert.ToInt32(Console.ReadLine());
+
+            foreach (var item in db)
+            {
+                if (item.ID == id)
+                {
+                    db.Remove(item);
+                    break;
+                }
+            }
+            Instruction();
+        }
+
+
+
+
+
+
+
+
+        public static void Details()
+        {
+
+        }
+    }
+}

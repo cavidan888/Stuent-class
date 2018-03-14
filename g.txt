@@ -167,3 +167,150 @@ namespace oopStudent
         }
     }
 }
+
+
+
+bawqa  tema  
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace exercies
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            //List<string> keywords = new List<string>() { "Tenbel", "Kod yazmayan", "Yola Veren", "Esneyen", "Bekar" };
+
+            //while (true)
+            //{
+            //    Console.WriteLine("Write Something");
+            //    var e1 = Console.ReadLine();
+
+            //    void Show()
+            //    {
+            //        foreach (var item in keywords)
+            //        {
+
+            //            if (e1.Contains(item) == true)
+            //            {
+            //                Console.WriteLine("Siz losersiz");
+            //                break;
+            //            }
+            //        }
+
+            //    }
+
+            //    Show();
+
+
+            //}
+
+
+            //int i = 0;
+            //double n;
+
+            //Console.WriteLine("Ededi Yazin");
+            //n = Convert.ToDouble(Console.ReadLine());
+
+
+            //do
+            //{
+
+            //    n = n / 10;
+            //    i++;
+
+
+            //} while (Math.Abs(n)>1);
+            //Console.WriteLine(i);
+
+
+
+            //int num;
+            //int cem = 0;
+            //int r;
+            //Console.WriteLine("Eded Daxil Edin");
+            //num = Convert.ToInt32(Console.ReadLine());
+
+            //while (num != 0)
+            //{
+            //    r = num % 10;
+            //    num = num / 10;
+            //    cem = cem + r;
+            //}
+            //Console.WriteLine("Ededlerin Cemi : " + cem);
+
+            //int vowels = 0;
+            //int consonant = 0;
+            //int space = 0;
+
+            //Console.WriteLine("Soz, birleshme ve ya cumle daxil edin");
+            //string v = Console.ReadLine().ToLower();
+
+            //for (int i = 0; i < v.Length; i++)
+            //{
+            //    if (v[i] == 'a' || v[i] == 'e' || v[i] == 'i' || v[i] == 'o' || v[i] == 'u')
+            //    {
+            //        Console.WriteLine("sait: " + v[i]);
+            //        Console.WriteLine();
+            //        vowels++;
+
+
+            //    }
+
+            //    else if (char.IsWhiteSpace(v[i]))
+
+            //    {
+            //        space++;
+            //    }
+
+            //    else
+            //    {
+            //        Console.WriteLine("samit :" + v[i]);
+            //        Console.WriteLine();
+            //        consonant++;
+            //    }
+            //}
+
+            //Console.WriteLine("Umumi saitlerin sayi: {0}", vowels);
+            //Console.WriteLine("Umumi samitlerin sayi: {0}", consonant);
+            //Console.WriteLine("Umumi boshluqlarin sayi: {0}", space);
+            //Console.ReadLine();
+
+
+            //string cumle = Console.ReadLine();
+
+            //string[] words = cumle.Split(' ');
+
+            //foreach (var item in words)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+            //var ad = Console.ReadLine();
+            //string[] a = ad.Split(' ');
+            //string b = "";
+            //for (int i = 0; i < a.Length; i++)
+            //{
+            //    b = a[i];
+            //    if (a[i] == "tenbel" || a[i] == "Tenbel")
+            //    {
+            //        a[i] = "Loser";
+            //    }
+            //    Console.Write(a[i] + " ");
+            //}
+
+           
+
+
+        }
+    }
+}
